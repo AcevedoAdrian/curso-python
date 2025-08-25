@@ -43,3 +43,23 @@ Resultado esperado
 El jugador gana: [True/False]
 """
 
+palabra_adivinar = "python"
+
+def adivinar_palabra(letra_prueba, palabra_intento):
+    """
+    Determina si una letra está en una palabra específica y si un intento de palabra coincide con esa palabra.
+ 
+    Args:
+    letra_prueba (str): La letra a probar si está en la palabra.
+    palabra_intento (str): La palabra intentada para adivinar la palabra correcta.
+ 
+    Returns:
+    None
+    """
+    letra_en_palabra = letra_prueba in palabra_adivinar
+    print(f"¿La letra de prueba se encuentra en la palabra? {letra_en_palabra}")
+    resultado_adivinanza = (palabra_intento == palabra_adivinar) and (len(palabra_intento) == len(palabra_adivinar))
+    print(f"El jugador gana: {resultado_adivinanza}")
+
+adivinar_palabra("p", "python")
+
